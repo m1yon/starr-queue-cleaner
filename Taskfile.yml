@@ -1,0 +1,9 @@
+version: "3"
+
+tasks:
+  test:
+    cmds:
+      - go run gotest.tools/gotestsum@latest --format testname -- ./... -short
+  wtest:
+    cmds:
+      - go run gotest.tools/gotestsum@latest --watch-chdir --format testname --watch . -short
